@@ -1,0 +1,23 @@
+
+body {
+    background-color: cornflowerblue;
+}
+
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#terminal span {
+    font-size: 16px;
+}
+
+.terminal {
+    width: 1000px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
