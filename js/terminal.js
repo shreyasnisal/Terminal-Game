@@ -65,7 +65,9 @@ $('#terminal').terminal({
                 this.echo(`[[;magenta;]${i}]`)
         }
     },
-    cat: function(filename) {
+    cat: function(...args) {
+        console.log(args)
+        filename = ''
         if (current_directory[filename] === undefined) {
             this.error('cat: ' + filename + ': No such file or directory')
         }
@@ -111,8 +113,9 @@ $('#terminal').terminal({
 }, {
     greetings: `[[;dodgerblue;]Welcome to the Linux Game]`,
     height: 400,
+    checkArity: false,
     prompt: function() {
-        prompt_str1 = 'shreyas@LINUX_GAME:'
+        prompt_str1 = 'shreyas@WEB_TERMINAL:'
         prompt_str2 = pwd_tostring(pwd)
         prompt_str3 = '$ '
 
